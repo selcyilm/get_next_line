@@ -6,7 +6,7 @@
 /*   By: selcyilm <selcyilm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/12/24 15:58:05 by selcyilm      #+#    #+#                 */
-/*   Updated: 2023/12/24 19:31:55 by selcyilm      ########   odam.nl         */
+/*   Updated: 2023/12/25 10:03:06 by selcyilm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 	{
+		free(str);
 		str = NULL;
 		return (0);
 	}
